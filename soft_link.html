@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Creation of Soft links</title>
+</head>
+
+<body>
+    <div>
+        <h3>Creation of Link files </h3>
+        <div style="border: 2px solid blue;">
+            <ol>
+                <p>There are two types of link files</p>
+                <ol>
+                    <li><b> Soft link</b></li>
+                    <li><b> Hard link</b></li>
+                </ol>
+            </ol>
+        </div><br>
+
+        <div style="border: 2px solid red;">
+            <b>1.Soft link file</b>
+            <ol>-- soft link is a pointer to another file. <br>
+                -- It is just like windows short cut.<br>
+                -- It is also called symbolic link.<br>
+                <br>
+                -- How to create a soft link?<br>
+                &nbsp;&nbsp;&nbsp;Ans: To create a soft link we need to use 'ln' command with -s option<br>
+                <br>
+                --syntax : to create a soft link<br>
+                &nbsp;&nbsp;&nbsp;<code>ln -s source_file_name soft_link_name</code><br>
+
+                <br>
+                --Example: create a soft link file for Dumy.txt<br>
+                &nbsp;&nbsp;&nbsp;Ans: <code>ln -s Dumy.txt Dumy_soft_link</code>
+            </ol>
+
+            <ol>
+                <b>Important conclusion about soft link</b>
+                <ol>
+                    <li> Original file and soft link file don't have same time stamp</li>
+                    <li> Original file and soft link file don't have same size</li>
+                    <li> Original file and soft link file don't have same inode number</li>
+                    <li> If we delete soft link file then there is no impact on original file.</li>
+                    <li> If we delete original file then there is impact on soft link</li>
+
+                </ol>
+
+
+
+
+            </ol>
+
+
+
+        </div><br><br>
+
+
+        <a href="Hard_link.html" target="_blank">Go to next page</a>
+
+
+
+
+    </div>
+
+
+
+
+
+    <pre>
+
+
+
+
+
+    </pre>
+</body>
+
+</html>

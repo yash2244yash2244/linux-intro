@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awk command</title>
+</head>
+
+<body>
+    <h3>awk command</h3>
+
+    <div style="border: 2px solid red;">
+        <b>awk command</b>
+        <ol>
+            - It is utility command <br>
+            - awk is scripting language and used for manipulating data and <br>
+              &nbsp;&nbsp;&nbsp;generating reports<br>
+            - awk command is abberevited from name of three developers <br>
+            <ol>
+                - Alfred Aho<br>
+            - Peter Weinberger <br>
+            - Brian Kernighan <br>
+            </ol>
+        </ol>
+    </div>
+    <br>
+
+
+
+<div style="border: 2px solid red;">
+    Q. When we should go with <b>awk command</b>?<br>
+    Ans: If there is irregular seperator and we cannot fix the delimeter to cut <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data from file then we should go with <b>awk command</b><br>
+</div>
+<br>
+
+<div style="border: 2px solid red;">
+Synatax of <b>awk command</b><br>
+    <code>awk &lt;option&gt; 'action' file_name</code>
+        <br>
+        some important points about awk <br>
+        1) <b>$</b> symbol is used to specify <b>field (column)</b> <br>
+        2) <b>-F</b> option is used to specify <b>delimeter</b><br>
+</div>
+        <br>
+<br>
+<div style="border: 2px solid red;">
+        - First Create a file <br>
+        If we want to save/redirect any command output
+        into a file<br>
+&nbsp;&nbsp;
+        <code>command_name &gt; File_name</code><br>
+
+        I want to save df command ouput into a file<br>
+        Ans: <code>df -h > cutdemo.txt</code>
+        <br>
+</div>
+<br>
+<br>
+
+
+<div>
+    	
+<div style="border: 2px solid green;">
+    
+    <b>Example 1:</b> seperate the words on the bsis of space and print first field <br>
+using awk command<br>
+Syntax: &nbsp;&nbsp;<code> awk '{print $1}' cutdemo.txt</code><br>
+
+<em>
+    
+Here we have not used option -F to specify delimeter because<br>
+default delimeter is space.<br>
+<br>
+You must specify action in single quote.<br>
+Here $ is used to specify column <br>
+</em>
+<br>
+
+<em>
+    Note: in awk default delimeter is space. i.e- If you are not specifying any<br>
+delimeter then bydefault it is considered as space <br>
+
+</em>
+
+
+
+
+</div>
+<br>
+<br>
+
+
+
+
+<div style="border: 2px solid green;">
+    
+    <b>Example 2:</b> seperate the words on the basis of space and print second field <br>
+using awk command<br>
+Syntax: &nbsp;&nbsp;<code> awk '{print $2}' cutdemo.txt</code><br>
+
+
+
+</div>
+<br>
+<br>
+
+
+
+
+
+<div style="border: 2px solid green;">
+    
+    <b>Example 3:</b> seperate the words on the basis of space and print second field  <br>
+using awk command<br>
+Syntax: &nbsp;&nbsp;<code>  awk '{print $4}' cutdemo.txt</code><br>
+
+
+
+</div>
+<br>
+<br>
+
+
+
+
+
+<div style="border: 2px solid green;">
+    
+    <b>Example 4:</b> seperate the words on the basis of space and print first field, third field<br>
+and sixth field<br>
+Syntax: &nbsp;&nbsp;<code> awk '{print $1,$3,$6}' cutdemo.txt </code><br>
+
+
+
+
+</div>
+<br>
+<br>
+
+
+
+
+
+
+<div style="border: 2px solid green;">
+    
+    <b>Example 5:</b> seperate the words on the basis of colon operator and print <br>
+first field <br>
+Syntax: &nbsp;&nbsp;<code> awk -F':' '{print $1}' cutdemo.txt</code><br>
+
+
+
+</div>
+<br>
+<br>
+
+
+
+
+
+<div style="border: 2px solid green;">
+    
+    <b>Example 6:</b> seperate the words on the basis of colon operator and print second and third field<br>
+Syntax: &nbsp;&nbsp;<code>    awk -F':' '{print $2,$3}' cutdemo.txt </code><br>
+<br>
+
+
+</div>
+<br>
+<br>
+
+
+
+
+
+
+</div>
+<br>
+<br>
+<a href="chmod.html" target="_blank">Go to next page</a>
+
+
+<pre>
+
+
+
+
+
+</pre>
+
+</body>
+
+</html>

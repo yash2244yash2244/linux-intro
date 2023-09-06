@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to view file content on screen</title>
+</head>
+
+<body>
+    <div>
+        <h3>How to view the content of file or to display content of
+            a file on screen.</h3>
+        <ol>To display file content on screen we have below commands
+
+            <ol><b>cat</b> command</ol>
+            <ol><b>tac</b> command</ol>
+            <ol><b>more</b> command</ol>
+            <ol><b>less</b> command</ol>
+            <ol><b>head</b> command</ol>
+            <ol><b>tail</b> command</ol>
+            <ol><b>reve</b> command</ol>
+        </ol>
+    </div>
+
+
+    <div>
+        <h3>by using cat command</h3>
+
+
+        <ol>syntax: &nbsp;<code>cat -n file_name</code></ol>
+
+        <ol>Example: &nbsp;<code>cat -n /Abc.text</code><br>
+            <img src="/image/linux_images/cat -n Abc.jpg" alt="">
+        </ol>
+
+
+    </div><br>
+    <hr>
+    <div>
+        <h3>by using head command</h3>
+        <ol>Use: If we want to display top lines from a file then use <b>head</b> command</ol>
+
+        <ol>Syntax: &nbsp; <code>head -n file_name</code><br>
+            Here -n indicate number of top lines do you want to display</ol>
+
+        <ol>Example:&nbsp; <code> head -5 Abc.txt</code><br>
+            <img src="/image/linux_images/head -n .jpg" alt="">
+        </ol>
+
+
+
+    </div><br>
+    <hr>
+
+    <div>
+        <h3>by using tail command</h3>
+        <ol>Use: If we want to display bottom lines from a file then use <b>tail</b> command</ol>
+
+        <ol>syntax: tail -n file_name<br>
+
+            Here -n indicate how many bottom lines do you want to display.</ol>
+
+        <ol>Example tail -5 Abc.txt
+            <br>
+            <img src="/image/linux_images/tail -n.jpg" alt="">
+        </ol>
+
+
+
+
+
+    </div><br>
+    <hr>
+
+
+    <div>
+        <h3> tac command : </h3>
+        <ol>It is reverese of <b>cat</b></ol>
+        <ol>I will display file content in reverese order of lines.</ol>
+        <ol>First line will become last line and last line will become first</ol>
+        <ol>This is vertical reverese</ol>
+        <ol>Example: <br>
+            <img src="/image/linux_images/tac.jpg" alt="">
+        </ol>
+    </div><br>
+    <hr>
+
+
+    <div>
+        <h3>rev command</h3>
+        <ol><b>rev</b> means reverese</ol>
+        <ol>Here each line content will be reversed</ol>
+        <ol>It is horizontal reverese</ol>
+        <ol>Syntax:&nbsp; <code> rev file_name</code></ol>
+        <ol>Example: <br>
+            <img src="/image/linux_images/rev.jpg" alt="">
+        </ol>
+
+    </div><br>
+    <hr>
+
+
+    <div>
+        <h3>more command</h3>
+        <ol>It is used to display the content of a file page by page</ol>
+
+        <ol>syntax: &nbsp; <code>more file_name</code></ol>
+
+        <ol>Example:&nbsp; <code>more f1.txt</code> <br>
+            When this command is executed it will display first page
+            <ol>-&nbsp; <kbd>enter</kbd> key to view content line by line <br>
+                -&nbsp; <kbd>space</kbd> bar to view next page or press <kbd>d</kbd> key <br>
+                -&nbsp;<kbd>q</kbd> is used to quite/exit <br>
+                <img src="/image/linux_images/more.jpg" alt="">
+            </ol>
+        </ol>
+
+        <ol><em>Note: with the help of more command we can navigate only in forward direction</em></ol>
+    </div><br>
+    <hr>
+
+
+    <div>
+        <h3>less command</h3>
+        <ol><code>less</code> command is used to display file content page by page </ol>
+        <ol>with help of <code>less</code> command we navigate forward as well as
+            backword direction</ol>
+        <ol>Syntax: &nbsp; <code>lees file_name</code>
+            <ol>example: &nbsp;<code>less /etc/passwd</code>
+
+                ones command get executed it will display first page of file <br>
+                <ol>1 If we want to navigate line by line press <kbd>enter</kbd> <br>
+                    2 If we want to go on next page then press <kbd>d</kbd> or <kbd>space</kbd> bar <br>
+                    3 If we want to go on previous page then press <kbd>b</kbd> <br>
+                    4 If we want to exit then press <kbd>q</kbd></ol>
+            </ol>
+        </ol>
+    </div><br>
+    <hr>
+
+    <a href="File_system_navigation_command.html">Go to next page</a>
+
+
+
+    <pre>
+
+
+
+
+
+
+</pre>
+</body>
+
+</html>

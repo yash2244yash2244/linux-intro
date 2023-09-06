@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mv command</title>
+</head>
+
+<body>
+    <div>
+        <h3>mv command</h3>
+
+        <ol>about <b>mv</b> command</ol>
+        <ol><b>mv</b> stands for move</ol>
+        <ol><b>mv</b> is command is used for two purpose
+            <ol>
+                <li>rename a file or directory</li>
+                <li>cut and paste</li>
+            </ol>
+        </ol>
+
+
+    </div><br>
+    <hr>
+
+    <div>
+        <h3>1. Rename a file or directory using mv command</h3>
+
+        <ol>Syntax to rename a file <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <code><b>mv</b>source_file_name new_file_name</code>
+        </ol>
+
+        <ol>Example: file Dumy2.txt present in DirD directory
+            rename Dumy2.txt as Dumy.txt</ol>
+
+        <ol>Ans:
+            &nbsp;&nbsp; <code>mv DirD/Dumy2.txt DirD/Dumy</code><br>
+            <img src="/image/linux_images/Dumy2.jpg" alt="" width="650" height="100">
+        </ol>
+
+
+        <ol>
+            <h3>Renaming of Directories </h3>
+
+            <ol>Syntax: &nbsp;&nbsp;<code>mv &nbsp;old_directory_name_or_path&nbsp; new_directory_name_or_path</code>
+            </ol>
+
+            <ol>Example: &nbsp;&nbsp;
+                <code> mv A AAA</code><br>
+                &nbsp;&nbsp;
+                <b>Directory</b> <b>A</b> will be renamed to <b>AAA</b><br>
+                <img src="/image/linux_images/dir a.jpg" alt="" width="650" height="100">
+            </ol>
+        </ol>
+
+    </div><br>
+    <hr>
+
+    <div>
+        <h3> 2. cut and paste operation using mv command.</h3>
+
+        <ol> We can cut a file from one location and paste into another
+            location using <b>mv</b> command</ol>
+
+        <ol> We can cut all files and sub-directory from one location
+            and paste into another location using <b>mv</b></ol>
+
+        <ol> We can cut a whole directory from one location and paste another in
+            another location</ol>
+
+        <ol> Moving is nothing but cut and paste operation.</ol>
+
+        <ol> Below are some use cases to cut and paste operation
+            using <b>mv</b> command. <br><br>
+
+
+            <li><b>Example 1:</b> Cut a Dumy.txt file from DirD directory and paste in
+                DirB directory.</li><br>
+            <ol>Syntax:&nbsp;&nbsp;<code>mv DirD/Dumy.txt    DirB/</code><br>
+                <img src="/image/linux_images/mv DirA.jpg" alt="" width="650" height="100">
+            </ol>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            or
+            <br>
+            <ol><code>mv DirD/Dumy.txt  DirB/Dumy1.txt</code>
+                <br><img src="/image/linux_images/mv DirA to DirB dumy1.jpg" alt="" width="650" height="100">
+            </ol>
+        </ol>
+    </div><br>
+    <hr>
+
+
+
+
+
+    <h3>Below are some use cases to cut and paste operation using mv command: </h3><br>
+    <div>
+        <div style="border: 1px solid red;">
+            <ol><b>Use Case 1: cut a file and paste </b>
+                <ol> Syntax: mv source_file_name destination_file_path</ol>
+
+                <p><b>Example:</b> Cut a Dumy.tx file from DirD directory and paste in DirB directory </p>
+
+                <p><b>Ans:</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>mv DirD/Dumy.txt  DirB/</code><br>
+                    <img src="/image/linux_images/use case1 dird to dirb.jpg" alt="" width="650" height="100"><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <b>OR</b><br><br>
+                    <code>mv DirD/Dumy.txt DirB/Dumy1.txt</code><br>
+                    <img src="/image/linux_images/use case1 dird to dirbdumy1.jpg" alt="" width="650" height="100">
+                </p>
+            </ol>
+        </div>
+        <br>
+
+
+
+
+        <div style="border: 1px solid red;">
+            <ol>
+                <b>Use Case2: cut all files and sub-directories</b>
+                <ol>Syntax: &nbsp;&nbsp;<code>mv source_dir_path/* Distination_dir_path</code></ol>
+
+                <p><b>Example:</b> Cut all files and subdirectory from DirD and paste
+                    in DirE Directory </p>
+
+                <p><b>Ans:</b> &nbsp;&nbsp;&nbsp;<code>mv DirD/*  DirE</code><br>
+                    <img src="/image/linux_images/use case2.jpg" alt="" width="650" height="100">
+                </p>
+            </ol>
+            </ol>
+        </div><br>
+
+
+
+
+        <div style="border: 1px solid red;">
+            <ol>
+                <b>Use Case 3: cut a whole directory and paste </b>
+                <ol>Syntax: &nbsp;&nbsp;<code>mv source_dir_path destination_dir_path</code></ol>
+
+                <p><b>Example:</b> cut a whole DirD and past in DirB </p>
+                <p><b>Ans:</b> &nbsp;&nbsp;<code>mv DirD DirB</code><br>
+                    <img src="/image/linux_images/use case3.jpg" alt="" width="650" height="100">
+                </p>
+            </ol>
+        </div>
+    </div><br>
+
+    <a href="cp_command.html" target="_blank">Go to next page</a>
+
+
+
+
+
+    <pre>
+
+
+
+
+
+
+    </pre>
+</body>
+
+</html>

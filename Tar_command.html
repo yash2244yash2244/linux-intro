@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TAR Command</title>
+</head>
+
+<body>
+
+  <h3>tar command</h3>
+
+  <div style="border: 2px solid green;">
+
+
+    - <b>tar</b> stands <b>Tape Archieve</b><br>
+
+    - <b>tar</b> command is used to group multiple files
+    or multiple directory into single file.<br>
+
+    - Syntax to Create <b>archieve file</b> of a single file<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <code>tar option archieve_file_name.tar source_file_name</code> <br>
+    <ol>
+
+      Here while creating <b>archieve file</b> we use option <b>-cvf</b><br>
+      <ol><b>c</b> stands for <b>create</b><br>
+        <b>v</b> stands for <b>verbose</b> <br>
+        <b>f</b> stands for <b>forcefully</b>
+
+      </ol>
+    </ol>
+    <br>
+
+    <em>Note: Use <b>.tar</b> extension manualy to the <b>archieve file name</b>.</em><br>
+
+
+    - Syntax to Create archieve file of a directory<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <code>tar option archieve_file_name.tar source_dir_name</code><br>
+
+
+    <em>Note: while creating archieve file of a directory use <b>.tar</b> extension manualy</em><br>
+
+
+    - Syntax to create archieve file of multiple files.<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <code>tar -cvf f123.tar f1.txt f2.txt f3.txt</code><br>
+
+    <em>Note: source file nemes should be seperated by space</em><br>
+
+  </div>
+  <br>
+  <br>
+
+
+
+
+
+  <h3> Extract content of archieve file</h3>
+  <div style="border: 2px solid red;">
+
+    - To <b>extract</b> the content of an archieve file tar command is used with <b>-xvf</b> option<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <code>tar option archieve_file_name</code>
+    <br>
+    - While extracting <b>tar file</b> content use <b>-xvf</b> option<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    x stands for extract
+
+    <br>
+    -Example: Extract f123.tar file content<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <code> tar -xvf f123.tar</code>
+
+    <br>
+  </div>
+<br>
+<a href="zip_file.html" target="_blank">Go to next page</a>
+
+
+
+
+  <pre>
+
+
+
+
+  </pre>
+</body>
+
+</html>

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find command</title>
+</head>
+<body>
+    <h3>find command</h3><br>
+
+
+    <div>
+<b># find command </b><br>
+- <b>find</b> command is used to search a file or directory in a file system <br>
+- <b>find</b> command searches file or directory recursively<br>
+<br>
+- syntax: <br>&nbsp;&nbsp;&nbsp;&nbsp;
+    <code>find search_location what_to_find option file_or_dir_name</code> <br>
+	<br>
+- <b>search location :</b> where we want to find a file?<br>
+
+- If we want to search a file in current working path then use dot(.)<br>
+- If we want to search a file in a particular location then specify <br>
+   &nbsp;&nbsp;&nbsp; that location or that path<br>
+- <b>Example</b> suppose, I want to search a file f1.txt at A/B/C then <br>
+   specify that path in search location<br>
+ 
+    </div>
+    <br>
+
+
+
+
+    
+    <div>
+          
+   
+<b>What to find</b> : this part is an optional<br>
+- Here we need to specify type <br>
+- type means either file or directory <br>&nbsp;&nbsp;
+- If we don't specify type then by default<br>
+   find command searches for both-file and directory<br>
+- If we want to specify type then use -type and then use f for a file
+   d for directory<br>
+   <ol>
+   
+   - type <b>f</b> means search only for files <br>
+   - type <b>d</b> means search only for directory<br>
+   </ol>
+ 
+    </div>
+    <br>
+
+
+
+
+
+
+    <div>
+  
+        <b>option :</b> option means on which basis we want to find a file<br>
+        -> we have different options<br>
+        <ol>
+        <li> -name : find a file or directory on the basis of name</li>
+        <li> -user : find a file or directory on the basis of user name</li>
+        <li> -group : find a file or directory on the basis of group name </li>
+        <li> -perm : find a file or directory on the basis of permission </li>
+        <li> -size : find a file or directory on the basis of size<br></li>
+<br>
+
+        <ol type="a">
+
+              To specify size use below symbols/characters 
+<ol>
+              <li>    M -> MB</li>
+               <li>   G -> GB </li>
+              <li> c -> byte</li>
+             <li>  + -> Greater than </li>
+             <li>  - (minus) -> less than</li>
+              
+               </ol>
+            </ol>
+            <br>
+
+
+        <li> To specify time or find a file on the basis of time use below options</li>
+           <ol type="a">
+             <li>-ctime -> created time </li>
+            <li>-mtimr -> modified time </li>
+            <li>-atime -> Acess time </li>
+            Note: Here we need to specify values in days
+             
+            <li>-cmin -> created time in minute</li>
+            <li>-mmin -> modified time in minute</li>
+            <li>-amin -> access time in minute</li>
+            </ol>
+            
+       <li> -empty: To find an empty file or directory</li>
+        
+       </ol>
+    </div>
+    <br>
+    <br>
+
+
+
+
+
+
+    <div>
+
+
+<div style="border: 1px solid red;">
+    
+    
+    
+    <b>Example 1:</b> search f1.txt file in current working path
+<br>
+<b>Syntax:</b>find . -type f -name f1.txt
+
+
+
+
+
+
+
+</div>
+<br>
+
+<div style="border: 1px solid red;">
+    
+    
+    
+    <b>Example2 :</b> If we type find and press enter then I will display all files 
+and directory present at current location
+
+
+
+
+
+
+
+</div>
+<br>
+
+<div style="border: 1px solid red;">
+    
+    
+    
+    <b>Example 3:</b> If we type 
+  find -type f <br>
+  It will list out only files from current working path
+
+
+
+
+
+
+
+  </div>
+  <br>
+  
+<div style="border: 1px solid red;">
+    
+    
+    
+    <b>Example 4:</b> If we type 
+    find -type d <br>
+	It will list out only directory from a current path
+
+
+
+
+
+
+
+    </div>
+    <br>
+	
+<div style="border: 1px solid red;">
+    
+    
+    
+    <b>Example 5:</b> List out all .txt files from current working path
+<br>
+<b>Syntax:</b>find .-type f -name '*.txt' 
+
+
+
+
+
+
+
+</div>
+<br>
+
+<div style="border: 1px solid red;">
+    
+    
+    
+    <b>Example 6:</b> list out all .log files from current working path
+<br>
+<b>Syntax:</b>find . -type f -name '*.log'
+
+
+
+
+
+
+
+</div>
+<br>
+
+<div style="border: 1px solid red;">
+    
+    
+    
+    <b>Example 7:</b> List out all files and directory whose name start with D from current 
+working location
+<br>
+<b>Syntax:</b>find . -name 'D*'
+
+
+
+
+
+
+
+</div>
+<br>
+
+<div style="border: 1px solid red;">
+    
+    
+    
+    <b>Example 8:</b> Find only files whose name start with D from current location
+<br>
+<b>Syntax:</b>find . -type f -name D*
+
+
+
+
+
+
+
+</div>
+<br>
+
+<div style="border: 1px solid red;">
+    
+    
+    
+    <b>Example 9:</b> Find only Directory whose name start with D from current location
+<br>
+<b>Syntax:</b>find . -type d -name 'D*'
+
+
+
+
+
+
+
+</div>
+<br>
+
+<div style="border: 1px solid red;">
+    
+    
+    
+    <b>Example10:</b> Find files or directory whose name end with 't' from current location
+<br>
+<b>Syntax:</b>find . -name '*t'
+
+
+
+
+
+
+
+</div>
+<br>
+
+<div style="border: 1px solid red;">
+    
+    
+    
+    <b>Example11:</b> Find fiels or directory whose name contains 'g'
+<br>
+<b>Syntax:</b>find . -name '*g*'
+
+
+
+
+
+
+
+</div>
+<br>
+
+<div style="border: 1px solid red;">
+    
+    
+    
+    <b>Example12:</b> Find files or directory whose second letter is 'a'
+<br>
+<b>Syntax:</b>find . -name '?a*'
+
+
+
+
+
+
+
+</div>
+<br>
+
+    </div>
+
+
+
+<div style="border: 2px solid black;">
+    
+B. finding files and directory on the basis of user name <br>
+syntax: find location type -user user_name <br>
+<br>
+<b>Example:</b>: find files and directory which belongs to rrd user <br>
+<b>Syntax:</b> find . -type f -user rrd<br>
+       find . -type d -user rrd<br>
+	   find . -user rrd<br>
+	   
+
+
+</div>
+<br>
+<br>
+
+
+
+
+<div style="border: 2px solid black;">
+c. find files and directory on the permission basis<br>
+<br>
+<b>Example:</b>: find only files from current location where permission is 777<br>
+<b>Syntax:</b> find . -type f -perm 777<br>
+<br>
+<b>Example:</b> find only files from current location whose permission is not 777<br>
+<b>Syntax:</b> find . -type f ! -perm 777<br>
+
+
+</div>
+<br>
+<br>
+
+
+<a href="find_command_part2.html" target="_blank">Go to next page</a>
+
+
+
+
+
+
+
+
+
+
+    <pre>
+
+
+
+
+
+
+    </pre>
+</body>
+</html>

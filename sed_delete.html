@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete with SED Command</title>
+</head>
+
+<body>
+    <h4>sed command:'Delete Action'</h4><br>
+
+
+
+    <div style="border: 2px solid blue;">
+
+        <b>Action 2: Delete</b><br>
+        <ol>
+            -- For delete action we use character 'd'
+
+
+
+
+            <div style="border: 2px solid violet;">
+
+                <b>Example:</b> Delete line number 3 from sedDemo.txt file_name <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <code>sed '3d' sedDemo.txt</code><br>
+                <img src="/image/linux_images/sed 3d.jpg" alt="" width="400"><br>
+                <em>Note: Don't use -n option in delete action</em>
+            </div><br>
+
+
+
+
+            <div style="border: 2px solid violet;">
+
+                <b>Example:</b> Delete line number 5 and line number 10<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <code>sed '5d;10d' sedDemo.txt</code><br>
+                <img src="/image/linux_images/sed 5d;10d.jpg" alt="" width="400">
+            </div><br>
+
+
+            <div style="border: 2px solid violet;">
+
+                <b>Example;</b> delete lines from 2 to 8<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <code>sed '2,8d' sedDemo.txt</code><br>
+                <img src="/image/linux_images/sed 2,8d.jpg" alt="" width="400">
+            </div><br>
+
+
+            <div style="border: 2px solid violet;">
+
+                <b>Example:</b> delete line number 2, line number 5 and lines from 8 to 11<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <code>sed '2d;5d;8,11d' sedDemo.txt</code><br>
+                <img src="/image/linux_images/sed 2d;5d;8,11d.jpg" alt="" width="400">
+            </div><br>
+        </ol>
+        <br>
+        <br>
+
+
+
+
+        <div style="border: 2px solid violet;">
+
+            <h3> Action 3: insert data before line</h3>
+            <ol>-Syntax:&nbsp;&nbsp;<code>sed '3i typedata here' file_name</code><br>
+
+                <b>Example:</b> Insert data before line number 3 in sedDemo.txt file <br>
+                &nbsp;&nbsp;&nbsp;
+                <code>sed '3i THIS IS INSERTED DATA' file_name</code><br>
+                <img src="/image/linux_images/sed before line.jpg" alt="" width="500">
+            </ol>
+        </div><br>
+
+
+
+        <div style="border: 2px solid violet;">
+            <h3>Action 4: Add data after line</h3>
+            <ol>-Syntax: &nbsp;&nbsp;<code>sed '3a typedata here' file_name</code><br>
+                <b>Example:</b> Add data after line number 3 in sedDemo.txt file <br>
+                &nbsp;&nbsp;&nbsp;
+                <code> sed '3a THIS IS INSERTED DATA AFTER LINE NUMBER 3 ' sedDemo.txt</code><br>
+                <img src="/image/linux_images/sed after line.jpg" alt="" width="600">
+            </ol>
+        </div>
+    </div>
+    <br>
+<a href="sed_replace.html" target="_blank">Go to next page</a>
+
+
+    <pre>
+
+
+
+
+
+    </pre>
+
+
+</body>
+
+</html>

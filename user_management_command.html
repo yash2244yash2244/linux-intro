@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management Command</title>
+</head>
+<body>
+
+
+
+    <div style="border: 2px solid red;">
+
+<b>1. How to create a new group?</b>
+<br>
+<ol>
+- to create a new we use <b>"addgroup"</b> command<br>
+- syntax:&nbsp;&nbsp;<code>sudo addgroup group_name </code><br>
+
+- To execute addgroup command we need <b>admin</b> access.<br>
+- group name should be in <b>lower</b> case otherwise we will get<br>&nbsp;&nbsp;
+   an error <br>
+- group information is availabel in <b>/etc/group</b> file<br>
+- we can display <b>/etc/group</b> file content and cross check <br>
+   created group is available or not<br>
+
+</ol>
+    </div>
+    <br>
+    <br>
+
+
+
+    <div style="border: 2px solid red;">
+        
+
+<b>2. How to create a new user?</b>
+<br>
+<ol>-To create new user we use <b>"adduser"</b> command<br>
+-Syntax: &nbsp;&nbsp;
+    <code>sudo adduser group_name user_name</code><br>
+	
+-in the above syntax <b>group name</b> is optional<br>&nbsp;&nbsp;
+   If we don't provide <b>group name</b> then <b>new group</b> will <br>&nbsp;&nbsp;
+   be created and naem of that group is same as<b> user name</b> .<br>
+   
+-If you provide group name then that group should be <br>&nbsp;&nbsp;
+   exist in the system<br>
+   
+-user name should be in<b> lower case</b><br>
+
+</ol>
+    </div>
+    <br>
+    <br>
+
+
+
+
+    <div style="border: 2px solid red;">
+        
+Practical example: creating user without specifying user name<br>
+<br>
+If you don't specify group name then system internally create a group <br>
+And name of group is same as user name <br>
+<img src="/image/linux_images/practical example.jpg" alt="" width="300"><br>
+
+<br>
+<img src="/image/linux_images/bca.jpg" alt="" width="300"><br>
+Here we are getting an error "bca" does not exist.<br>
+If we are specify the group name then use option 
+-ingroup<br>
+<br>
+Syntax: &nbsp;&nbsp;
+   <code>sudo adduser -ingroup group_name user_name</code><br>
+   <br>
+
+<b>Example : &nbsp;<code>sudo adduser -ingroup bca manik</code></b><br>
+<img src="/image/linux_images/bca 2.jpg" alt="" width="300">
+   
+   
+    </div>
+    <br>
+    <br>
+
+
+
+
+
+    <div style="border: 2px solid red;">
+        
+
+
+<b>3. How to get information about particular user?</b>
+i.e finger command<br>
+
+- To get information about particular user we use "finger" command<br>
+- syntax<br>&nbsp;&nbsp;&nbsp;
+         <code>finger user_name</code><br>
+         
+- by default this command is not available but we can install<br>&nbsp;&nbsp;
+ manually as below <br>
+ <ol>
+    sudo apt install cmd_name <br>
+    sudo apt install finger<br>
+    </ol>
+    <br>
+- while installing finger command some times we will get an error <br>&nbsp;&nbsp;
+ "Unabel to locate package 'finger'"<br>
+ 
+- So, in that case first execute below command<br> &nbsp;&nbsp;&nbsp;
+   sudo apt-get update<br>
+   
+- then execute install command<br>
+<br>
+<img src="/image/linux_images/finger1.jpg" alt="" width="300"><br>
+<img src="/image/linux_images/finger2.jpg" alt="" width="300"><br>
+<img src="/image/linux_images/finger3.jpg" alt="" width="300"><br>
+
+    </div>
+    <br>
+    <br>
+
+
+
+
+
+    <div style="border: 2px solid red;">
+        <b>4. How to delete user?</b><br>
+- To delete user we use "deluser" command<br>
+
+- syntax:
+    <code>sudo deluser user_name </code><br>
+- <code>sudo deluser vivek</code> <br>
+
+    </div>
+<br>
+<br>
+
+
+
+
+
+<div style="border: 2px solid red;">
+    <b>5. How to delete group?</b><br>
+    - To delete a group we use "delgroup" command<br>
+    - syntax: 
+         <code>sudo delgroup group_name</code><br>
+         
+    - Example: <code>Delete bca2020 group</code><br>
+    
+</div>
+<br>
+<br>
+
+
+
+
+<div style="border: 2px solid red;">
+
+    
+
+
+<b>6. Change ownership of a file?</b><br>
+
+- To change owner of a file we use <b>"chown"</b> command<br>
+- Here <b>chown</b> stands for <b>change owner</b> <br>
+- Syntax: 
+    <code>sudo chown owner_name file_name</code> <br>
+	
+- Example: I want to change <b>owner</b> of Abc.txt file <br>&nbsp;&nbsp;
+   current owner name of Abc.txt is rrd<br>
+   <img src="/image/linux_images/abc.jpg" alt=""><br>
+   
+
+
+   by default chown command change the owner of a file <br>
+   present in current working directory.<br>
+   
+</div>
+<br>
+<br>
+
+
+
+
+
+<div style="border: 2px solid red;">
+    
+   
+   
+If you want to change file owner which is present in another location then <br>
+specify that location as  below<br>
+ 
+ <code>sudo chown owner_name file_path</code><br>
+ 
+ Example suppose I want to change owner of cutdemo.txt<br>
+ and that file is located at /home/rrd/cutdemo.txt then <br>
+ command will become <br>
+    <code>sudo chown rohit /home/rrd/cutdemo.txt</code><br>
+	
+</div>
+<br>
+<br>
+
+
+
+
+
+
+
+<div style="border: 2px solid red;">
+    <b>7. Change group name of a file?</b><br>
+- To <b>change group</b> name of a file we use <b>"chgrp"</b> command <br>
+- Here <b>chgrp</b> stands for <b>change group</b> <br>
+- Syntax: 
+    &nbsp;&nbsp;<code> sudo chgrp group_name file_name</code> <br>
+	 
+	 
+If you want to change file group name which is located <br>
+at different location then use below syntax<br>
+   sudo chgrp group_name file_path<br>
+   
+ <b>Example:</b> <code>sudo chgrp bca /home/rrd/cutdemo.txt</code><br>
+ 
+ 
+</div>
+
+<br>
+<br>
+
+
+
+
+
+
+<div style="border: 2px solid red;">
+    	
+
+<b>8. Add user in a group </b><br>
+a.add single user in a group <br>
+- To add user in a <b>group</b> we use <b>gpasswd</b> command<br>
+- If we want to add a single user in a group <br>
+   then use<b> -a </b>option <br>
+- If we want to add multiple users in a group <br>
+   then use <b>-m</b> option <br>
+- If we want to <b>delete</b> a user from a group then use -d option <br>
+
+</div>
+<br>
+
+
+
+<div style="border: 2px solid red;">
+    <b>Example:</b> Add mariya user in 'ui_dev' group <br>
+    &nbsp;&nbsp;
+ <code>sudo gpasswd -a user_name Group_name </code><br>
+  <br>
+  &nbsp;&nbsp;
+      <code>sudo gpasswd -a vivek ui_dev</code><br>
+	  <br>
+<b>Example:</b> Add amit,rrd, rohit and pawan in ui_dev group <br>
+  <code>sudo gpasswd -M user1,user2,user3 group_name </code><br>
+      <code>sudo gpasswd -M amit,rrd,rohit,pawan ui_dev</code><br>
+	  <br>
+Here we need to seperate multiple user name by comma<br>
+
+</div>
+
+<br>
+<br>
+
+
+
+
+
+
+<div style="border: 2px solid red;">
+    
+	
+
+
+
+<b>Delete user from a group</b><br>
+
+syntax:<br>
+     <code>sudo gpasswd -d user_name group_name</code><br>
+     
+<b>Example:</b> delete amit from ui_dev group <br>
+ <code>sudo gpasswd -d amit ui_dev</code><br>
+
+
+Add single user in a mutiple groups <br>
+Syntax:
+ <code>sudo usermod -a -G group1,group2,group3 user_name</code><br>
+ 
+
+<b>Example:</b> add rohit into g1,bca,be2021<br>
+ <code>sudo usermod -a -G g1,bca,be2021 rohit</code><br>
+
+
+If we want know particular user group info <br>
+then use groups command<br>
+syntax: <code>groups user_name </code><br>
+
+</div>
+<br>
+<br>
+
+
+
+
+
+
+<div style="border: 2px solid red;">
+    
+<b>Change password</b><br>
+
+- To change password we use command passwd <br>
+
+&nbsp;&nbsp;&nbsp;a. change own passwd <br>
+&nbsp;&nbsp;&nbsp;b. change other user passwd<br>
+
+<br>
+a. Change own password <br>
+syntax : passwd user_name<br>
+<br>
+b. Change other user passwd <br>
+syntax: 
+         sudo passwd user_name <br>
+		 
+</div>
+<br>
+<br>
+<a href="find_command.html">Go to next page</a>
+
+
+
+
+
+
+
+
+
+
+
+
+<pre>
+
+
+
+
+
+</pre>
+</body>
+</html>

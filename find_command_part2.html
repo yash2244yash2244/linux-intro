@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>find command 2</title>
+</head>
+<body>
+    <h3>find command 2</h3>
+    <div>
+
+       <b> find command </b><br>
+        Syntax:<br>
+  <code>find location type option file_or_dir_name</code><br>
+  <br>
+
+#Find an empty file or an empty directory<br>
+<b>Example 1:</b> find all empty files from current location<br>
+<b>Syntax:</b> <code>find . -type f -empty</code><br>
+<br>
+
+<b>Example 2:</b> Find all empty files from current location where name start 
+            with A<br>
+	<b>Syntax:</b> <code>find . -type f -empty -name 'A*'</code><br>
+	<br>
+
+<b>Example 3:</b> Find all empty directory from current location<br>
+<b>Syntax:</b> <code>find . -type d -empty</code><br>
+<br>
+    </div>
+<br>
+
+
+
+
+
+
+<div>
+    
+<b># Find file or directory on the basis of size </b><br>
+
+- To specify size we use -size option1<br>
+- To specify size value use below symbols<br>
+    <ol>
+        <li> M-> MB</li>
+	<li> G-> GB</li>
+	<li> k -> KB</li>
+	<li> c -> byte </li>
+	<li> + -> Greater than </li>
+    <li> - (minus) -> less than</li>
+    </ol>
+    <br>
+
+
+<b>Example 1:</b> find all files from current location where size is 2kb<br>
+<b>Syntax:</b><code> find . -type f -size 2k (use small k) </code><br>
+<br>
+
+
+<b>Example 2:</b> find all files whose size is less than 2 byte 	<br>
+<b>Syntax:</b><code> find . -type f -size 2c</code><br>
+<br>
+
+
+<b>Example 3:</b> find all files whose size is greater than 2 byte but less than 4 byte <br>
+<b>Syntax:</b><code> find . -type f -size +2c -size -4</code><br>
+<br>
+
+
+<b>Example 4:</b> find all files from current location where size is 2 byte or 4 byte<br>
+<b>Syntax:</b><code> find . -type f -size 2c -o -size 4c</code><br>
+<br>
+
+
+<em>Note : To specify or conditio we need to use -o option </em><br>
+
+
+</div>
+<br>
+
+
+
+
+
+
+
+<div>
+<b>
+    # find file on the basis of created time, modified time and 
+    access time</b><br>
+    <br>
+    
+  <b>Example :</b> find all files from current location which are created 10 days back<br>
+  <b>Syntax:</b> <code>find . -type f -ctime -10</code><br>
+  <br>
+
+
+
+  <b>Example :</b> find all files from current location which are modified 10 days back <br>
+  <b>Syntax:</b> <code>find . -type f -mtime -10 </code><br>
+  <br>
+
+
+
+  <b>Example: </b>find all files current location which are accessed 10 days back<br>
+  <b>Syntax:</b> <code>find . -type f -atime -10</code><br>
+  <br>
+
+
+
+  <b>Example: </b>find all files from current location which are created 10 min back<br>
+  <b>Syntax:</b> <code>find . -type f -cmin -10 </code><br>
+  <br>
+
+
+
+  <b>Example: </b>find all directory from current location which are modified 10 min back<br>
+  <b>Syntax:</b> <code>find . -type f -mmin -10 </code><br>
+  <br>
+
+
+
+  <b>Example: </b>find all directory from current location which are accessed 10 min back<br>
+<b>Syntax:</b> <code>find . -type d -amin -10 </code><br>
+  <br>
+
+
+
+</div>
+<br>
+<br>
+
+
+
+
+
+
+
+<div>
+    
+
+<b>#Find command with -exec option </b><br>
+- Ones files is found, If we want to perform some operation on that result like <br>
+   copy a file, delete a file , move from one location to another<br>
+   then use -exec (execute) option with find command<br>
+   <br>
+
+<b>Example:</b> find all log files from current location and mv to Directory ABC<br>
+Syntax: find all log files from current location <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <code>find . -type f -name '*.log' -exec mv {} ABC \;</code><br>
+	  <br>
+<b>IMP points </b>
+<ol>
+<li>- There is space between -exec option and command name </li>
+<li>- There is space between command name (mv) and curly bracket </li>
+<li>- There is space between Directory name (ABC) and curly bracket</li>
+<li>- There is space between Directory name (ABC) and backword slash</li>
+<li>- There is no space between backword slash and semicolon</li>
+</ol>
+
+
+
+
+
+Example: Find all log files from current location and delete those files<br>
+Syntax: <code> find . -type f -name '*.log' -exec rm -f {} \;</code><br>
+
+Note: If we want delete a file then use rm command and its syntax is<br> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<code>rm -f file_name</code><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+-f means revome forcefully
+<br>
+Note: If we want remove non-empty and empty directory then also we can use rm command<br>
+
+Syntax: <code>rm -rf directory_name</code> <br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Here -r stands for recursively <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+f stands for forcefully<br>
+
+<br>
+Example: find cutdemo.txt file from current working path and print its content on screen<br>
+Syntax: <code> find . -type f -name cutdemo.txt -exec cat -n {} \;</code><br>
+
+</div>
+
+<br>
+<br>
+
+
+
+
+
+
+
+
+
+<div>
+    
+    
+    
+<b># locate command </b><br>
+- locate command is also used to find files <br>
+- find command searches file in a linux file system <br>
+- locate command searches file in linux database <br>
+<br>
+- syntax<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<code>locate file_dir_name</code> <br>
+		   <br>
+-Note: in locate command no need to spacify search location <br>
+&nbsp;&nbsp;
+ because it always searches a file in database<br>
+
+- by default locate command is not available but we can install maunally as below <br>
+&nbsp;&nbsp;
+      sudo apt install plocate or sudo apt install mlocate<br>
+	  
+	  
+</div>
+<br>
+<br>
+
+
+
+
+
+<div>
+    
+<b>Q. what is difference find command and locate command</b><br>
+<br>
+<b>find:  </b>
+<ol>
+<li>find command always searches a file in file system</li>
+       <li>find command is more powerfull than locate</li>
+	  <li> in find command we can find file on the basis of name, <br>&nbsp;&nbsp;&nbsp;
+	     size,user,group ,perm, time</li>
+	  <li> find command is slower than locate</li>
+	  <li> find command always give accurate result </li>
+	  <li> we can use -exec option to perform operation on result </li>
+</ol>
+
+<br>
+<br>
+	  
+<b>locate:  
+</b>
+<ol>
+<li>locate command always searches a file in database </li>
+    <li>     locate command is less powerfull than find </li>
+	<li>	 In locate command we can find file on the basis on name</li>
+	<li>	 locate command is faster than find</li>
+	<li>	 locate command may or may not give accurate result </li>
+	<li>	 We can't use -exec option to perform operation on result</li>
+		</ol>
+</div>
+
+
+
+<div>
+    
+		
+Q. Why find command is more powerfull than locate ?<br>
+Ans: While finding a file using find command we can use different criteria <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     like name, size,perm, time but in locate command we can find file only name basis<br>
+	 
+	 <br>
+	 <br>
+Q. Why locate command is faster than find?<br>
+Ans: locate command searches a file at only one place i.e database but find command <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     searches file in file system<br>
+	 
+	 <br>
+	 <br>
+Q. locate command may or may not give accurate result, Why?<br>
+--
+ 1. locate command searches file in a database<br>&nbsp;&nbsp;&nbsp;
+   2. bydefault this database get updated ones a day <br>&nbsp;&nbsp;&nbsp;
+   3. suppose after database update you have created some files <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   then those file entry will not exist in database.so that<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   locate command will not produce accurate result<br>
+   
+   <br>
+   <br>
+
+ <b>how to update database manually </b>
+ <br>
+Syntax: <code> sudo updatedb
+</code> <br>
+ 
+</div>
+<br>
+<br>
+<a href="grep_command.html" target="_blank">Go to next page</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <pre>
+
+
+
+
+    </pre>
+</body>
+</html>

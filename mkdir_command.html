@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mkdir command</title>
+</head>
+
+<body>
+    <div>
+        <h3>Creation of Directory/Folder in Linux</h3>
+        <ol>-- To create a directory we use <strong>'mkdir'</strong> command</ol>
+        <ol>-- Here <b>mkdir</b> stands for Make directory.</ol>
+        <ol>-- How to use this command (syntax)?<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code> mkdir &lt;option&gt; name_of_directory</code></ol>
+        <ol>-- here,<b>option</b> part is optional</ol>
+    </div><br>
+    <hr>
+
+
+
+    <div>
+        <h3>Example 1: Create a directory named with Monday </h3>
+
+
+        <ol>-- Syntax:&nbsp;&nbsp;&nbsp;<code> mkdir Monday </code></ol>
+
+        <ol>
+            <ol><img src="/image/linux_images/mkdir monday.jpg" alt="" width="650" height="150"></ol>
+        </ol>
+        <br>
+
+
+
+        <ol>- Syntax:&nbsp;&nbsp;&nbsp;<code> mkdir -v Monday</code></ol>
+
+        <ol>
+            <ol><img src="/image/linux_images/mkdir -v monday.jpg" alt="" width="650" height="150"></ol>
+        </ol>
+
+
+        <ol>-- Here option <b>-v</b> stands for verbose <br> -- Ones command get executed it
+            will print a massage on screen.</ol>
+
+        <ol>-- Note: If name is already available then we will get
+            errro massage saying <br>
+
+            &nbsp;&nbsp;&nbsp;<code> mkdir: cannot create directory 'xxx': File exists</code></ol>
+
+    </div><br>
+    <hr>
+
+
+
+
+    <div>
+
+        <h3>Creation of multiple directory at a time </h3>
+
+        <div>
+            <ol>Syntax:&nbsp;&nbsp;&nbsp;
+                <code>mkdir &lt;option&gt; dir1_name dir2_name dir3_name dirN_name </code>
+            </ol>
+            <ol><img src="/image/linux_images/mkdirmultiple1.jpg" alt="" width="650" height="150">
+            </ol>
+
+
+            <ol>Here, Directory names should be seperated by space</ol>
+
+        </div><br>
+        <hr>
+
+
+
+        <div>
+            <ol>Suppose If I seperate directory names by comma or any other symbol
+                then what will happen?<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>mkdir &lt;option&gt; dir1_name,dir2_name,dir3_name,dirN_name</code>
+
+            </ol>
+            <ol><img src="/image/linux_images/mkdir multiple comma.jpg" alt="" width="650" height="150"></ol>
+
+
+            <ol>Here we don't get any error. The name provide by you, <br>
+                that named directory get created. i.e. single directory get created.</ol>
+
+
+
+
+        </div><br>
+        <hr>
+
+
+
+        <div>
+            <h3>Creation of Multiple directory, but there is pattern </h3>
+            <ol>syntax: &nbsp;<code>A1 A2 A3 A4 A5 .... A10 = mkdir -v A{1..10}</code></ol>
+            <ol><img src="/image/linux_images/mkdir a1 to 10.jpg" alt=""></ol>
+            <ol>Here 10 directory will get created and names will be like
+                <br> A1 A2 A3 A4 A5 A6 A7 A8 A9 A10
+            </ol>
+
+        </div><br>
+        <hr>
+
+
+
+        <div>
+            <h3>Creation of Directory with -p option.</h3>
+            <ol>Suppose my requirement is - I want to create directory path as
+                &nbsp;A1/AA2/AAA3</ol>
+
+            <ol>
+                <li><b>First way:</b></li>
+                <ol>step 1: <code>mkdir -v A1</code> <br>
+                    step 2: <code>mkdir -v /A1/AA2</code> <br>
+                    step 3: <code>mkdir -v /A1/AA2/AAA3</code> </ol><br>
+                <img src="/image/linux_images/mkdir A1.jpg" alt="">
+
+                <br><br>
+                <li><b>Second way:</b></li>
+                <ol>step 1: create a directory A1 <br>
+                    step 2: switch to A1 <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cd A1 <br>
+                    step 3: create a directory AA2 <br>
+                    step 4: switch to AA2 <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cd AA2 <br>
+                    step 5: create a directory AAA3</ol>
+                <img src="/image/linux_images/step2 mkdir.jpg" alt="">
+
+                <br><br>
+
+                <li><b>Third way:</b></li>
+                <ol>syntax:&nbsp;&nbsp;<code>mkdir -p A1/AA2/AAA3</code><br>
+                    <ol>--here p stands for path<br>
+                        --when this command get executed and if parent directories are not available<br>
+                        &nbsp;&nbsp;&nbsp;then command itself create those parent directories.<br>
+                        --If parent directories are already available then re-use those.</ol>
+                </ol>
+
+                <img src="/image/linux_images/mkdir -p.jpg" alt="">
+
+        </div>
+        <br><br>
+        <a href="How_to_remove_directory.html" target="_blank">Go to next page</a>
+
+
+
+
+
+
+
+
+
+
+
+
+        <pre>
+
+
+
+
+    </pre>
+</body>
+
+</html>

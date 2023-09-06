@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creation of hidden files and hidden directory.</title>
+</head>
+
+<body>
+    <h3>Creation of hidden files and hidden directory.</h3>
+
+    <div>
+
+        <div style="border: 2px solid magenta;">
+            <ol>
+                Q. What is mean by a <b>hidden file</b>? <br>
+                Ans: &nbsp;Any file whose name start with <b>dot</b> is called as a <b>hidden file</b>. <br>
+
+                Example : <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <code>Abc.txt</code>&nbsp;&nbsp; => Normal file<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <code>.Abc.txt</code>&nbsp;&nbsp; => hidden file
+
+            </ol>
+        </div> <br>
+
+        <div style="border: 2px solid magenta;">
+            <ol>
+                Q. What is mean by <b>hidden directory</b>?<br>
+                Ans: Any directory whose name start with <b>dot</b> is called as a <b>hidden directory</b><br>
+
+                Example<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <code>DirA</code>&nbsp;&nbsp; => Normal Directory<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <code>.DirA</code>&nbsp;&nbsp;=> hidden directory
+            </ol>
+        </div><br>
+
+
+        <div style="border: 2px solid magenta;">
+            <ol>
+                Q. Why we create a <b>hidden file</b> or <b>hidden directory</b>?<br>
+                Ans: <b>To hide the data</b>.<br>
+                Example: All files which are internaly used by <b>Kernal</b> are the
+                are the <b>hidden files</b>.
+
+            </ol>
+        </div>
+
+
+
+    </div> <br>
+    <div>
+        <h4> How to create hidden file </h4>
+
+        <p> &nbsp;&nbsp;the command which are used to create normal file,
+            same command are used to create hidden file.</p>
+
+        <div style="border: 2px solid darkmagenta;">
+            <ol>
+
+                Example: <b>create an empty hidden file</b>.<br>
+                Ans: <code>&nbsp;&nbsp; touch file1.txt</code>&nbsp;&nbsp; = Normal file<br>
+                <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; touch .file.txt</code>&nbsp;&nbsp; = hidden file
+                <br>
+            </ol>
+        </div><br>
+
+
+        <div style="border: 2px solid darkmagenta;">
+            <ol>
+                Example: <b>create multiple empty hidden files at a time</b><br>
+                Ans: touch .fileA.txt .fileB.txt .fileC.txt .fileD.txt</ol>
+        </div><br>
+
+
+        <div style="border: 2px solid darkmagenta;">
+            <ol>
+                Example: <b>create hidden file using cat command</b>.<br>
+                Ans: <code>&nbsp;&nbsp;cat > .file_name</code>&nbsp;&nbsp;<br>
+                <ol> type content here<br>
+                    ones typing is completed <br>
+                    To save the content and <br>
+                    exit press ctrl+d </ol>
+            </ol>
+        </div><br>
+
+
+
+        <div style="border: 2px solid darkmagenta;">
+            <ol>
+                Example: <b>Append data to existiong hidden files</b><br>
+                Ans : <code>&nbsp;&nbsp;cat >> .file_name</code>&nbsp;&nbsp;<br>
+                <ol>type content here<br>
+                    ones typing is completed <br>
+                    press ctrl+d to save and exit.</ol>
+            </ol>
+        </div><br>
+
+    </div>
+    <div>
+        <p><b>Q. How to display hidden file content</b> <br>
+            Ans: The commands which are used to display <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            normal file content, same command are used <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            to display hidden file content. <br><br>
+
+            Example: <b>Display hidden file content using cat command</b> <br>
+            Ans:&nbsp;&nbsp;&nbsp;&nbsp; <code>cat -n hidden_file_name</code></p>
+
+    </div><br><br>
+
+    <div>
+
+        <p><b>Q. How to create a hidden directory?</b><br>
+            Ans: The command which is used to <b>create normal directory</b><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            same command is used to <b>create hidden directory</b></p>
+    </div>
+
+
+
+    <div>
+        <h3>#Interconversion of hidden file and normal file</h3>
+        <div style="border: 2px solid mediumvioletred;">
+            <ol>
+                <li> Hidden to normal file <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>mv hidden_file_name Normal_file_name</code></li>
+                <br>
+    
+                <li> Normal to hidden file<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>mv Normal_file_name hidden_file_name</code></li>
+                <br>
+    
+                <li> Normal directory to hidden directory<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>mv Normal_dir_name hidden_dir_name</code></li><br>
+    
+                <li> Hidden directory to normal directory<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>mv hidden_dir_name Normal_dir_name</code></li>
+    
+            </ol>
+        </div></div><br><br>
+        <a href="soft_link.html" target="_blank">Go to next page</a>
+    
+
+    <pre>
+
+
+
+
+
+        </pre>
+</body>
+
+</html>

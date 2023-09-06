@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print command</title>
+</head>
+
+<body>
+
+
+<h3>sed command:'Print' Action</h3>
+
+
+    <div style="border: 2px solid violet;">
+
+        <h3>Action 1: Print </h3>
+        <ol>
+            - For print action/operation we use 'p' character<br>
+
+            <div style="border: 2px solid blue;">
+                <ol>
+                    <b>Example</b> : print line number 1 from sedDemo.txt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <code>sed -n '1p' sedDemo.txt</code><br>
+                    <img src="/image/linux_images/sed -n 1p.jpg" alt="" width="400"> <br>
+                    <em>Note: while printing data using sed command we need to specify option -n <br>
+                        If we don't specify -n option then target line get printed two times and<br>
+                        other lines also get printed </em>
+                </ol>
+            </div><br>
+
+
+
+
+
+
+
+
+
+            <div style="border: 2px solid blue;">
+                <ol>
+                    <b>Example</b>: print line number 5 form seddemo.txt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <code> sed -n '5p' sedDemo.txt</code><br>
+                    <img src="/image/linux_images/sed -n 5p.jpg" alt="" width="400">
+                </ol>
+            </div><br>
+
+
+
+
+
+            <div style="border: 2px solid blue;">
+                <ol>
+                    <b>Example</b>: print header of a sedDemo.txt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <code> sed -n '1p' sedDemo.txt</code><br>
+                    <img src="/image/linux_images/sed -n 1p.jpg" alt="" width="400">
+                </ol>
+            </div><br>
+
+
+
+
+
+            <div style="border: 2px solid blue;">
+                <ol>
+                    <b>Example</b>: print last line of seddemo.txt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <code> sed -n '$p' seddemo.txt</code><br>
+                    <img src="/image/linux_images/sed -n footer.jpg" alt="" width="400"><br>
+                    <em>Note: $ stands for last line</em><br>
+                </ol>
+            </div><br>
+
+
+
+
+
+
+            <div style="border: 2px solid blue;">
+                <ol>
+                    <b>Example</b>: Print footer of sedDemo.txt<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <code> sed -n '$p' seddemo.txt</code><br>
+                    <img src="/image/linux_images/sed -n footer.jpg" alt="" width="400">
+                </ol>
+            </div>
+            <br>
+
+
+
+
+
+            <div style="border: 2px solid blue;">
+                <ol>
+                    <b>Example</b> : Print line number 2, line number 5 and line number 7<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <code>sed -n '2p;5p;7p' sedDemo.txt</code><br>
+                    <img src="/image/linux_images/sed -n 257.jpg" alt="" width="400"><br>
+                    <em> Note: If we want to print multiple lines then those line number should be<br>
+                        seperated by semicolon</em> <br>
+                </ol>
+            </div>
+            <br>
+
+
+
+
+
+            <div style="border: 2px solid blue;">
+                <ol>
+                    <b>Example</b>: Print header, footer , line number 10th and line number 8<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <code> sed -n '1p;$p;10p;8p' seddemo.txt</code><br>
+                    <img src="/image/linux_images/sed 181014.jpg" alt="" width="500">
+                </ol>
+            </div>
+            <br>
+
+
+
+
+
+            <div style="border: 2px solid blue;">
+                <ol>
+                    <b>Example</b>: print lines from 5 to 10<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <code> sed -n '5,10p' sedDemo.txt</code><br>
+                    <img src="/image/linux_images/sed 5to10.jpg" alt="" width="500" height="100"><br>
+                    <em>Note: To specify range of lines then use comma</em><br>
+                </ol>
+            </div>
+            <br>
+
+
+
+
+
+
+            <div style="border: 2px solid blue;">
+                <ol>
+                    <b>Example</b>: print line number 2, line number 5 and lines from 7 to 11<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <code> sed -n '2p;5p;7,11p' seddemo.txt</code><br>
+                    <img src="/image/linux_images/sed -n 257891011.jpg" alt="" width="400">
+                </ol>
+            </div>
+            <br>
+
+
+
+
+
+            <div style="border: 2px solid blue;">
+                <ol>
+                    <b>Example</b>: Print lines from 2 to 6 and 7 to 11<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <code> sed -n '2,6p;7,11p' seddemo.txt</code><br>
+                    <img src="/image/linux_images/sed -n 257891011.jpg" alt="" width="400">
+                </ol>
+            </div>
+            <br>
+
+
+    </div>
+    <br>
+    <a href="sed_delete.html" target="_blank">Go to next pages</a>
+
+    <pre>
+
+
+
+
+
+        
+    </pre>
+</body>
+
+</html>

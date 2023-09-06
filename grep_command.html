@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grep command</title>
+</head>
+
+<body>
+
+    <div>
+        <h3> #piping concept</h3>
+        <br>
+        <b>Q. What is mean by piping?</b>
+        - passing output of one command to another command using pipe operator is nothing but piping <br>
+        - Symbol of pipe operator is |<br>
+        - syntax <br>&nbsp;&nbsp;&nbsp;&nbsp;
+        <code>   command1| command2 | command3 | commandN</code><br>
+        <ol>
+            Here command 1 get executed and its output is passed to command 2 as input <br>
+            command 2 get executed and its output is passed to command 3 as input in this <br>
+            way command get executed and output passed to another command<br>
+            last command output get display on the screen or we can redirect into a file<br>
+        </ol>
+        <br>
+        <br>
+        <b>Example 1: </b> count files and directory present at current location <br>
+        Ans: ls | wc -w<br>
+        <br>
+        <b>Example 2:</b> cut first five character from line number 5 of cutdemo.txt
+        file <br>
+        <ol>
+            <br>
+            Step 1: cut first five character<br>
+            cut -c 1-5<br>
+            <br>
+            Step2: print line number 5<br>
+            sed -n '5p'<br>
+            <br>
+            Step3: sed -n '5p' cutdemo.txt | cut -c 1-5<br>
+        </ol>
+    </div>
+    <br>
+
+
+
+
+
+
+    <div>
+
+
+        <b>#grep command</b><br>
+        - <b>grep</b> stands for <b>Globle</b> <b>Regular</b> <b>Expreesion</b> <b>print</b> <br>
+        - use: This command is used to find or search particular pattern in<br>
+        single or multiple files <br>
+
+        - bydefault <b>grep</b> command search pattern by considering case <br>
+        - syntax: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <code> grep option pattern file_name</code><br><br><br>
+
+
+        <b>Example 1:</b> find "root" word in /etc/passwd file <br>&nbsp;&nbsp;&nbsp;&nbsp;
+        <code>grep " root" /etc/passwd</code> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        or <br> &nbsp;&nbsp;&nbsp;&nbsp;
+        <code> cat -n /etc/passwd | grep "root"</code><br>
+        <br>
+
+
+        <b>Example 2:</b> find "root" word in /etc/passwd by ignoring case<br>&nbsp;&nbsp;&nbsp;&nbsp;
+        <code>grep -i "Root" /etc/passwd</code><br>&nbsp;&nbsp;&nbsp;&nbsp;
+        <code>cat -n /etc/passwd | grep -i " root"</code><br>
+        <br>
+
+
+        <b>Example 3:</b> find "sys" word from top 5 lines of /etc/passwd file<br>&nbsp;&nbsp;&nbsp;&nbsp;
+        <code>cat -n /etc/passwd | head -5 | grep -i "sys "</code> <br>&nbsp;&nbsp;&nbsp;&nbsp;
+        <br>
+
+    </div>
+    <br>
+    <br>
+
+
+
+
+
+
+    <div>
+
+        <b>Some Regular Expreesion</b>
+        1. To match any character use *<br>
+        2. To match single character use ?<br>
+        3. To provide range use []
+        <ol>Example : count only.txt file from current</ol>
+        4. [abc] -- either a or b or c <br>
+        5. [aeiou] -- either a or e or i or o or u <br>
+        6. [AEIOU] -- either A or E or I or O or U<br>
+        7. [a-z] -- any lower case character<br>
+        8. [A-Z] -- any upper case character<br>
+        9. [0-9] -- any digit from 0 to 9<br>
+        10. ^ (cap symbol) -- start of line or beginig of lin either<br>
+        11. $ -- end of line <br>
+
+
+    </div>
+    <br>
+    <br>
+
+
+
+
+
+
+    <div>
+
+        <b>Example :</b>: count only files from current working path<br>
+        Syntax:&nbsp;&nbsp;<code> ls -l | grep '^-' | wc -l </code><br>
+        <br>
+        <br>
+
+        <b>Example :</b> : count directory from current working path <br>
+        Syntax:&nbsp;&nbsp;<code> ls -l | grep '^d' | wc -l </code><br>
+        <br>
+        <br>
+
+        <b>Example :</b>: count only link files from current working path <br>
+        Syntax:&nbsp;&nbsp;<code>  ls -l | grep '^l' | wc -last</code><br>
+        <br>
+        <br>
+
+        <b>Example :</b> : count only text file from current location<br>
+        <ol>
+            - ls -l | awk '{print $9}' | grep '.txt ' | wc -l <br>
+            - ls | grep '.txt' | wc -l <br>
+            - find . -type f -name '*.txt' | wc -last<br>
+            -w option of grep command<br>
+            - To extract match<br>
+        </ol>
+        <br>
+        <br>
+
+        <b>Example :</b>: find roo from /etc/passwd file <br>
+        Syntax:&nbsp;&nbsp;<code> cat -n /etc/passwd | grep " roo" -> without -w option </code><br>
+        Syntax:&nbsp;&nbsp;<code> cat -n /etc/passwd | grep -w "roo" -> with -w option </code><br>
+        <br>
+        <br>
+
+
+        <b># -A -B and -C option </b>
+        <ol>
+            -A: Print line after matched pattern
+            -B: Print lines before matched pattern
+            -C: Print lines After as well as before matched pattern
+        </ol>
+        <br>
+        <br>
+
+        <b>Example :</b>: Find "sys" word from /etc/passwd file and print 3 lines<br>
+        after match pattern
+        Syntax:&nbsp;&nbsp;<code> cat -n /etc/passwd | grep -A3 "sys"</code><br>
+        <br>
+        <br>
+
+        <b>Example :</b>: count only blank lines <br>
+        Step 1: Print only blank lines
+        Syntax:&nbsp;&nbsp;<code> grep '^$' cutdemo.txt</code><br>
+        <br>
+        Step : count blank lines
+        Syntax:&nbsp;&nbsp;<code> grep '^$' cutdemo.txt | wc -l</code><br>
+        <br>
+        Step 3: Display file content by ignoring blank lines
+        Syntax:&nbsp;&nbsp;<code> grep -v '^$' cutdemo.txt</code><br>
+        <br>
+        -v is for inversion<br>
+        inversion means change or reverse the output<br>
+        <br>
+
+        <br>
+        <br>
+
+        <b>Example :</b>: Delete blank lines from a file <br>
+        Syntax:&nbsp;&nbsp;<code> grep -v '^$' cutdemo.txt > file_name </code><br>
+
+    </div>
+
+
+
+
+
+
+
+    <pre>
+
+
+
+
+
+
+</pre>
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cp command</title>
+</head>
+
+<body>
+    <div>
+        <h3> cp command</h3>
+        <div style="border: 2px solid blueviolet;">
+            <ol><b>cp</b> stands for <b>copy</b> </ol>
+            <ol>Purpose : to copy a file or directory</ol>
+            <ol>Use case 1 : to copy from one file to another file</ol>
+            <ol>Syntax for use case 1 <br>&nbsp;&nbsp;
+                <code>cp source_file_name distination_file_name</code>
+            </ol>
+        </div><br>
+
+
+
+
+
+        <div style="border: 2px solid blueviolet;">
+            <ol>
+                <b># cp F1.txt F2.txt</b>
+                <ol>
+                    <li> Total content from a <b>F1.txt</b> will be copied to <b>F2.txt</b></li>
+                    <li>If destination file is not available then this command will create distination file</li>
+                    <li> If destination file is available and contains some data then this data will be override with
+                        source
+                        file dara</li>
+                    <li> Surce file must be available, if source file is not available then we will get error</li>
+                    <br>
+                    <img src="/image/linux_images/cp f1 to f2.jpg" alt="" width="600" height="150">
+                </ol>
+            </ol>
+        </div>
+        <br>
+
+
+
+
+
+
+        <div style="border: 2px solid blueviolet;">
+            <ol><b>#To copy F1.txt from directory A to directory B </b>
+                <ol> Syntax:-&nbsp;&nbsp;<code>cp A/F1.txt B/F2.txt</code><br>
+                    <img src="/image/linux_images/CP AF1 TO BF2 ONLY ONE.jpg" alt="" width="600" height="150">
+                </ol>
+
+            </ol>
+
+        </div>
+        <br>
+
+
+
+
+
+
+
+        <div style="border: 2px solid blueviolet;">
+
+            <ol><b># To copy all files from one directory to another directory</b>
+                <ol>Syntax : <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <code>cp source_directory_name/* destination_ directory_name</code><br>
+                    <b>Example :</b> &nbsp;&nbsp;<code>cp A/* B</code><br>
+                    <img src="/image/linux_images/cp A to B.jpg" alt="" width="600" height="150">
+
+                </ol>
+            </ol>
+        </div>
+        <br>
+
+
+
+
+
+
+
+        <div style="border: 2px solid blueviolet;">
+            <ol><b>#To copy from different location and pest to different location </b>
+                <ol>Syntax: <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <code>cp source_directory-name/* destination_directory_name</code><br>
+                    <b>Example :</b>&nbsp;&nbsp;<code> cp A/B/C/* X/Y/Z </code><br>
+                    <img src="/image/linux_images/cp ABC XYZ.jpg" alt="" width="600" height="150">
+                </ol>
+            </ol>
+            < </div>
+                <br>
+
+
+
+
+
+
+                <div style="border: 2px solid blueviolet;">
+                    <ol><b>To copy total directory to another directory </b>
+
+                        <ol>Syntax : <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <code>cp &lt;option&gt; source_directory_name destination_directiory_name</code><br>
+                            <b>Example:</b>&nbsp;&nbsp;<code>cp -r A BB</code><br>
+                            <img src="/image/linux_images/cp -r A BB.jpg" alt="" width="600" height="150">
+                </div><br>
+                <div style="border: 2px solid blueviolet;">
+                    <em>
+                        Note: whenever we are copying one directory to another directory then compulsary we need to use
+                        <b>-r</b> <br> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        here <b>-r </b>means <b>recursive</b><br><br>
+
+                        Note : if destination directory is not available then <b>cp command</b> itselt create
+                        distination directory <br>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        and pest all file from source directory but source directory won`t be created<br> <br>
+
+                        Note ; if destination directory is avialable then <b>cp command</b> directly pest total
+                        directory inside destination directory<br><br>
+
+                        Note : if we want to copy multiple file content into single file then this is not possible
+                        with<b> cp command</b><br>
+                    </em>
+                </div>
+                <br>
+        </div>
+        <br>
+
+
+
+
+
+
+
+        <br>
+        <a href="ls_command.html" target="_blank">Go to next page</a>
+        <pre>
+
+
+
+
+    </pre>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cration of Hard link</title>
+</head>
+
+<body>
+    <div>
+        <div style="border: 2px solid red;">
+            <b>2.Hard link</b>
+            <ol>
+                How to create <b>hard link</b> file?<br>
+                Ans:To create <b>hard link</b> we use '<b>ln</b>' command without <b>-s</b> option.<br><br>
+
+                Syntax: <code>&nbsp;&nbsp;ln source_file_name hard_link_file_name</code><br><br>
+
+                Q. Why we create <b>hard link</b>?<br>
+                Ans: for back up purpose
+            </ol>
+
+
+            <ol><b>Important conclusion about hard link.</b>
+                <ol>
+                    <li>
+                        Original file and hard link file have same time stamp</li>
+                    <li>
+                        Original file and hard link file have same size.</li>
+                    <li>
+                        Original file and hard link file have same inode number</li>
+                    <li>
+                        If we modify original file then same updation will reflect
+                        in hard link file </li>
+                    <li>
+                        If we modify hard link file then same updation will reflect
+                        in original file</li>
+                    <li>
+                        If we delete original file then there is no impact on hard link</li>
+                    <li>
+                        If we delete hard link file then there is no impact on original file.</li>
+                </ol>
+                <ol></ol><br>
+
+                <em>Note:we can create a hard link for file but not a directory</em>
+            </ol>
+        </div><br><br>
+        <a href="sort.html">Go To Next Page</a>
+    </div>
+</body>
+
+</html>

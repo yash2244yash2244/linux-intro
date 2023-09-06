@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chmod command</title>
+</head>
+
+<body>
+
+    <h3>chmod command</h3>
+
+
+
+    <div style="border: 2px solid orange;">
+        If we fire ls -l command then we will get output in below format <br>
+        Total ouput is divided into 7 column <br>
+        <table style="text-align: center;">
+            <tr>
+                <th>A</th>
+                <th>B</th>
+                <th>C</th>
+                <th>D</th>
+                <th>E</th>
+                <th>F</th>
+                <th>G</th>
+            </tr>
+
+            <tr>
+
+                <td style="color: orange;">&#x2193</td>
+                <td style="color: orange;">&#x2193</td>
+                <td style="color: orange;">&#x2193</td>
+                <td style="color: orange;">&#x2193</td>
+                <td style="color: orange;">&#x2193</td>
+                <td style="color: orange;">&#x2193</td>
+                <td style="color: orange;">&#x2193</td>
+
+            </tr>
+            <tr>
+
+                <td><img src="/image/linux_images/ls first block.jpg" alt=""></td>
+                <td><img src="/image/linux_images/ls secong block.jpg" alt=""></td>
+                <td><img src="/image/linux_images/ls third block.jpg" alt=""></td>
+                <td><img src="/image/linux_images/ls fourth block.jpg" alt=""></td>
+                <td><img src="/image/linux_images/ls fifth.jpg" alt=""></td>
+                <td><img src="/image/linux_images/ls sixth block.jpg" alt=""></td>
+                <td><img src="/image/linux_images/ls seventh block.jpg" alt=""></td>
+            </tr>
+        </table>
+        <br>
+
+
+
+
+        <div style="border: 2px solid rebeccapurple;">
+            <b> A:</b> This column give information about file type and
+            file permission <br>
+            <b>B</b>: This column give information about number of blocks allocated to
+            file 1 Block= 1024 byte<br>
+            <b>C</b>: Owner name (owner - who has created that file?) <br>
+            <b>D</b>: Group name (That file belongs to which group?)<br>
+            <b>E</b>: This column give information about file size<br>
+            <b>F</b>: This column give information about file creation or
+            file modification date <br>
+            <b>G</b>: file or Directory name <br>
+
+        </div>
+    </div>
+    <br>
+    <br>
+
+
+
+
+    <div style="border: 2px solid blueviolet;">
+
+        <b>We can change below thing related to file</b>
+        <ol>
+            <li> We can change file permission by using <b>chmod</b> command</li>
+            <li> we can change file owner name by using <b>chown</b> command</li>
+            <li> We can change file group name by using <b>chgrp</b> command</li>
+            <li> We can change file time stamp by using <b>touch</b> command </li>
+            <li> We can change file name using <b>mv</b> command</li>
+        </ol>
+
+    </div>
+    <br>
+    <br>
+
+
+
+
+
+
+
+
+
+    <div style="border: 2px solid yellowgreen;">
+
+        <b>1. Change file permission or change file mode </b>
+
+        - Every file has three modes <br>
+        <ol>
+            a. Read mode <br>
+            b. write mode <br>
+            c. execute mode<br>
+        </ol>
+        <br>
+        - Here mode means which operation we can perform on a file .<br>
+        - <b>Read</b> mode is indicated by letter '<b>r</b>' <br>
+        - <b>Write</b> mode is indicated by letter '<b>w</b>' <br>
+        - <b>Execute</b> mode is indicated by letter '<b>x</b>'<br>
+
+
+        <em>when we execute <b>ls -l</b> command then we will get <b>long information </b><br>
+            about file. in the ouput <b>first column</b> give information about file<br>
+            <b>type and file permission</b></em><br><br>
+
+        - There are total 10 character in every row <br>
+        - Every row First character indicate file type <br>
+        - If file is normal then it is hypen <b>-</b><br>
+        - If file is a directory then it is <b>d</b><br>
+        - If file is a soft link then it is <b>l</b><br>
+        - If file is socket file then it is <b>s</b> <br>
+
+        - Remaining 9 character are divided into three group and <br>
+        these character talks about file permission<br>
+        - Each group contains 3 character <br>
+        rwx -- owner file permission (group1)<br>
+        rwx -- Group file permission (group2)<br>
+        rwx -- other user file permission (group3)<br>
+
+    </div>
+    <br>
+    <br>
+
+
+
+
+
+
+
+
+
+
+    <div style="border: 2px solid yellowgreen;">
+
+        <b>Q. How to change file permission?</b><br>
+        -> To change file permission we need to use chmod command<br>
+
+        -> syntax chmod file_permission_numric_value file_name <br>
+
+        -> File permission numeric value is a always 3 digit nuber<br>
+        -> first digit is for owner permission<br>
+        -> second digit is for group permission<br>
+        -> third digit is for other user permission<br>
+
+
+        <b>We calculate numeric value using below table </b>
+        <table style="text-align: center; border: 1px solid orange;">
+            <tr>
+                <th> Operation</th>
+                <th>Operation symbol</th>
+                <th>Numberic Value</th>
+            </tr>
+
+            <tr>
+                <td style="border: 1px solid red;"> Read</td>
+                <td style="border: 1px solid red;">r</td>
+                <td style="border: 1px solid red;">4</td>
+            </tr>
+
+            <tr>
+                <td style="border: 1px solid red;">Write </td>
+                <td style="border: 1px solid red;">w</td>
+                <td style="border: 1px solid red;">2</td>
+            </tr>
+
+            <tr>
+                <td style="border: 1px solid red;">Execute</td>
+                <td style="border: 1px solid red;">x</td>
+                <td style="border: 1px solid red;">1</td>
+            </tr>
+        </table>
+
+    </div>
+    <br>
+    <br>
+
+
+
+
+    <div style="border: 2px solid red;">
+
+
+
+        <b>Q. How to generate file permission numeric value 3 digit number?</b>
+        <br>
+        <div style="border: 2px solid red;">
+            <ol>
+                1. Generate owner permission digit.<br>
+                For Example you are giving read,write and execute permission to owner <br>
+                <br>
+                owner digit = 4+2+1<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                = 7<br>
+
+                Ex.2 Give read and execute permission to owner
+                digit =4+0+1
+                =5
+            </ol>
+        </div>
+        <br>
+        <br>
+
+
+
+
+
+
+
+
+        <div style="border: 2px solid red;">
+
+            <b> 2. Generate group permission digit </b>
+            <ol>
+
+                Ex.1 Give read write and execute permission to group<br>
+                <br>
+                digit =4+2+1<br>
+                =7<br>
+                <br>
+                Ex 2 Give read permission to group <br>
+                digit =4+0+0<br>
+                =4<br>
+                <br>
+                Ex. 3 Give write and execute permission to group <br>
+                digit = 0+2+1=>3<br>
+                <br>
+
+            </ol>
+        </div>
+        <br>
+        <br>
+    </div>
+    <br>
+    <br>
+
+
+
+
+
+
+
+
+
+    <div style="border: 2px solid orangered;">
+        <b>3.On the same basis generate a digit for other user</b>
+
+        <ol>
+            combine all the digit in below order
+            <ol>
+                1. Owner digit<br>
+                2. group digit<br>
+                3. other user digit<br>
+            </ol>
+            <br>
+
+            Suppose we have to give read, write and execute permission
+            for owner<br>
+            4+2+1 =>7<br>
+            Suppose we have to give read, write and execute for owner<br>
+            4+2+1=> 7<br>
+
+            Suppose we have to give read, write and execute permission for
+            group<br>
+            4+2+1=>7<br>
+
+            ones we get digit for owner , group and other user then use
+            them in command syntax<br>
+            <code>chmod 777 file_name</code>
+            <br>
+            <br>
+
+
+            <div style="border: 2px solid black ;">
+                Example 2:<br>
+
+                suppose owner has to give read and execute permission<br>
+                4+0+1=> 5<br>
+
+                suppose group has to give read and write permission<br>
+                4+2=> 6<br>
+
+                suppose other user has to give only write permission<br>
+                0+2+0 => 2<br>
+
+                then chmod command will become<br>
+                chmod 562 file_name<br>
+            </div>
+            <br>
+            <br>
+
+
+
+            <div style="border: 2px solid black;">
+                Example 3:<br>
+
+                <code>chmod 175 f1.txt</code><br>
+
+                175 indicate<br>
+                owner has only execute permission<br>
+                group has read , write and execute permission<br>
+                other user has read and execute permission<br>
+            </div>
+            <br>
+            <br>
+
+
+            <div style="border: 2px solid black;">
+                Example 4<br>
+                <code>chmod 345 f1.txt</code><br>
+                Here 345 indicate<br>
+                write and execute permission are for owner<br>
+                only read permission for group<br>
+                read and execute permission for other users<br>
+            </div>
+            <br>
+            <br>
+
+
+
+
+            <div style="border: 2px solid black;">
+                Example 5<br>
+
+                <code>chmod 605 f1.txt</code><br>
+
+                owner -> read and write permission<br>
+                other -> read and execute permission<br>
+                group -> no permission<br>
+            </div>
+            <br>
+            <br>
+
+
+
+            <div style="border: 2px solid black;">
+                Example6<br>
+                <code> chmod 834 f1.txt</code><br>
+                when we try to execute above command we will ger an error<br>
+                because 8 is not valid permission number<br>
+            </div>
+
+            <br>
+    </div>
+    <br>
+    <br>
+    <a href="user_management_command.html" target="_blank">Go to next page</a>
+
+
+
+    <pre>
+
+
+
+
+    </pre>
+</body>
+
+</html>

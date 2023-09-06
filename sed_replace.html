@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SED Replace</title>
+</head>
+
+<body>
+    <div style="border: 2px solid violet;">
+
+        <h3>Action 5: subtitute</h3>
+
+        <ol>
+            - Replace one word with another word
+            - For subtitute we use <b> s </b>character <br>
+            - Syntax:&nbsp;&nbsp;<code>sed 's/source_word/target_word/' File_name</code>
+            <br>
+            <br>
+
+
+            <div style="border: 2px solid black;">
+                <b>Example:</b> Find 'one' word in seddemo2.txt file and replace with '001'<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <code> sed 's/one/001/' seddemo2.txt</code><br>
+                <table>
+                    <tr>
+                        <th>Original File</th>
+                        <th>Subtitute file</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="/image/linux_images/seddemo2.txt.jpg" alt="" width="350" height="">
+                        </td>
+                        <td>
+                            <img src="/image/linux_images/sed sone0001.jpg" alt="" width="400">
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <em> Note: by default subtitute take place only for first occurance
+                    If we want to replace all occurances then use g ( g for global)
+                </em>
+            </div>
+            <br>
+
+
+
+
+
+            <div style="border: 2px solid black;">
+                <b>Example:</b> find 'One' word form seddemo2.txt file and replace only second occurance with 0001<br>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <code>sed 's/One/0001/g' seddemo2.txt</code> <br>
+                <ol><img src="/image/linux_images/sed sone0001g.jpg" alt="" width="500"></ol>
+                <br>
+                <em>Here g means global</em><br>
+
+            </div>
+            <br>
+
+
+
+
+            <div style="border: 2px solid black;">
+                <b>Example:</b> find 'One' word form seddemo2.txt file and replace only second occurance with 0001<br>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <code>sed 's/One/0001/2g' seddemo2.txt</code> <br>
+                <ol><img src="/image/linux_images/sed sone00012g.jpg" alt="" width="500"></ol>
+                <br>
+                <em>Here 2g means second occurance</em><br>
+
+            </div>
+            <br>
+
+
+
+
+
+            <div style="border: 2px solid black;">
+                <b>Example:</b> find one word from seddemo2.txt from 4th line and replace only second occurance<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <code>sed '4s/One/0001/2g' seddemo2.txt</code><br>
+                <ol><img src="/image/linux_images/sed 4s2g.jpg" alt="" width="500"></ol>
+                <br>
+            </div>
+            <br>
+
+
+
+
+
+            <div style="border: 2px solid black;">
+                <b>Example:</b> Find One word from seddemo2.txt from line number 2 to 5 and replace all the occurance
+                with 0001<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <code>sed '2,5s/One/0001/g' seddemo2.txt</code><br>
+                <ol><img src="/image/linux_images/sed 2,5s.jpg" alt="" width="500"></ol>
+                <br>
+
+            </div>
+            <br>
+
+
+
+
+
+            <div style="border: 2px solid black;">
+                <b>Example:</b> Find 'Three' word from seddemo2.txt by ingoring case replace with 0003.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <code>sed 's/Three/0003/i' seddemo2.txt</code><br>
+                <ol><img src="/image/linux_images/sed 3i.jpg" alt="" width="500"></ol>
+                <br>
+            </div>
+            <br>
+
+
+
+
+
+            <div style="border: 2px solid black;">
+                <b>Example:</b> Replacement for all occurance and ignore the case<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <code>sed 's/Three/0003/gi' seddemo2.txt</code><br>
+                <ol><img src="/image/linux_images/sed 3gi.jpg" alt="" width="500"></ol>
+                <br>
+            </div>
+            <br>
+
+
+
+
+            <div style="border: 2px solid black;">
+                <b>Example:</b>Add the # to start of every line<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <code>sed 's/^/#' seddemo2.txt</code><br>
+            </div>
+            <br>
+
+
+
+
+            <div style="border: 2px solid black;">
+                <b>Example:</b> Add # symbol to every line and save the out in another file<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <code>sed 's/^/#/' seddemo2.txt > sampleout.txt</code><br>
+                <em>
+                    Note : By default sed command changes take place only on screen not in actual file.<br>
+                    If we want to reflect changes in a file then use -i option
+                </em>
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <code>sed -i 's/^#//' seddemo2.txt</code><br>
+
+                <em> Ones command get executed then ouput will not display on screen<br>
+                    it will reflect in the file<br>
+                    i.e Actual file content get modified</em>
+                <br>
+            </div>
+            <br>
+        </ol>
+    </div>
+    <br>
+
+<a href="Tar_command.html" target="_blank">Go to next page</a>
+
+    <pre>
+
+
+
+
+
+
+    </pre>
+    
+</body>
+
+</html>

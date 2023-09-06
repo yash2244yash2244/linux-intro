@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux File System Hieracrchy</title>
+</head>
+
+<body>
+    <h3>Linux File System Hieracrchy</h3>
+
+
+    <div>
+        <div>
+            <ol>
+
+                <li>Linux file system has tree like structure </li>
+
+                <li>In Linux drive concept is not available <br>
+                    like c drive , d drive</li>
+
+                <li>In Linux file system Hieracrchy top most directory is /</li>
+
+                <li> / is considered as root directory or parent directory</li>
+
+                <li>Under / we have sub-directory <br>
+                    like bin,sbin,etc,user,home,root,opt,mnt,media,proc dev
+                    sys,lib,var,boot,tmp.</li>
+
+            </ol>
+        </div><br>
+    </div><br>
+
+
+    <div>
+
+        <h3>1.bin -- bin means binary</h3>
+        <ol>-- binary executable files are stored inside bin</ol>
+        <ol>-- Actually commands related binaary executable files are available
+            in bin directory</ol>
+    </div><br>
+
+    <br>
+
+
+    <div>
+        <h3>2.sbin -- sbin stands for system bin </h3>
+
+        <ol>-- super user realted binary executable files are available in sbin
+            directory</ol>
+
+        <ol>-- example: 1.Disk Partitioning <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            2.Network Managment
+        </ol>
+
+
+    </div><br>
+
+
+    <div>
+
+        <h3>
+            3.etc directory
+        </h3>
+
+        <ol> -- This directory contains all system configuration related files.</ol>
+        <ol>-- These configuration files are used oprating system itself.</ol>
+        <ol>-- All user realted information is available inside
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/etc/passwd
+            file
+        </ol>
+
+        <ol>-- All group related information is available inside
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/etc/group
+            file
+        </ol>
+
+    </div><br>
+
+    <div>
+        <h3>4.dev directory-- dev means device
+        </h3>
+
+        <ol>-- In Linux everthing is treated as a file </ol>
+        <ol>-- Every device in Linux is treated as a file</ol>
+        <ol> -- All device related files will be available inside de
+            directory</ol>
+        <ol> -- By using device files we can communicate with devices</ol>
+    </div><br>
+
+    <div>
+        <h3>5.boot directory</h3>
+
+        <ol>-- Files which are required to boot or to start Linux oprating system
+            are available inside boot directory</ol>
+        <ol>-- All these files are internally used by operating system</ol>
+
+
+    </div><br>
+
+    <div>
+        <h3>6.lib directory</h3>
+
+        <ol> -- lib stand for library</ol>
+        <ol>-- These library files are required by our command or application</ol>
+
+
+    </div><br>
+
+
+    <div>
+
+
+        <h3>7.tmp Directory</h3>
+
+        <ol>-- tmp means temporary</ol>
+        <ol>-- If any file or directory is required to create for temporary purpose
+            then those files or directory are created inside tmp &nbsp;&nbsp;&nbsp;&nbsp;directory</ol>
+        <ol>-- Files or directory available inside tmp directory be deleted automatically
+            at the time of system shutdown</ol>
+
+    </div><br>
+
+
+    <div>
+        <h3>8. mnt directory</h3>
+        <ol>-- mnt means mounting </ol>
+        <ol>-- Attaching external device to already existing file is mounting</ol>
+        <ol>-- In old operating system mounting is done manually</ol>
+        <ol>-- In newer operating system mounting happens automatically</ol>
+        <ol>-- mnt directory contains files which are available just because of
+            manual mounting </ol>
+
+
+
+
+    </div><br>
+
+
+    <div>
+        <h3>9. media directory </h3>
+        <ol>-- files of automatic mounting will be placed in media directory</ol>
+        <ol>-- Note : Bydefault media directory does not contains any audio,
+            video or images</ol>
+
+
+
+    </div><br>
+
+
+    <div>
+
+        <h3>10 opt directory </h3>
+        <ol>-- opt means optional </ol>
+        <ol>-- All third party installation files are available in opt directory</ol>
+        <ol>-- If we install google chrome then all installation files will be
+            place inside opt directory</ol>
+
+
+
+
+    </div>
+
+
+
+    <div>
+        <h3>11. var directory</h3>
+        <ol>-- var means variable data</ol>
+        <ol>-- The data which is keep on changing such type of variable data will be
+            stored inside var directory</ol>
+        <ol>-- Example log file</ol>
+
+
+
+
+    </div><br>
+
+
+    <div>
+        <h3>12. usr directory</h3>
+        <ol>-- usr means user</ol>
+        <ol>-- this directory contains all user related softwares</ol>
+        <ol>-- Example : All vendor releted softwares </ol>
+        <ol>-- Here vendor means a person or organization providing softwares
+            on non-profitable form. <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Example Mysql</ol>
+        <ol>-- If user install venfor specific softwares then installed softwares
+            goes inside usr directory</ol>
+
+
+    </div>
+
+    <div>
+        <h3>13. home directory </h3>
+        <ol>-- For every user a seperate directory is created to hold or
+            to maintain user specific data</ol>
+        <ol>-- All these user directories will be stored inside home directory</ol>
+        <ol>-- Example 1: Suppose I have created user named as RRD, Ravi and MELISA <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/home/rrd --- This is rrd home
+            directory <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /home/ravi --- this is ravi home
+            directory <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /home/melisa --- this is melisa
+            home directory</ol>
+
+
+
+
+
+    </div>
+
+    <a href="some_common_commands.html" target="_blank">Go to next page</a>
+
+
+    <pre>
+
+
+
+
+
+    </pre>
+
+</body>
+
+</html>

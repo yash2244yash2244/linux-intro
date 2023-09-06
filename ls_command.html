@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ls command</title>
+</head>
+
+<body>
+    <div>
+
+
+
+
+
+        <h2>ls command:</h2>
+
+        <div style="border: 2px solid yellow;">
+            <ol> <b>ls</b> stands for <b>list</b> </ol>
+            <ol>Purpose this command is used to list out files and directories.</ol>
+            <ol> Syntax: &nbsp;&nbsp; <code>ls option directory_name</code> <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                <code>ls option dire_path</code>
+            </ol>
+        </div><br>
+
+
+
+
+        <div style="border: 2px solid yellow;">
+            <ol>Example 1: <b> ls </b>
+                <ol>--If we execute ls command without options and directory name or <br>
+                    --directory path then it will list out all files and directories <br>
+                    --name from current working path. <br>
+                    <img src="/image/linux_images/ls.jpg" alt="" width="700" height="200">
+                </ol>
+            </ol>
+        </div><br>
+
+
+
+
+        <div style="border: 2px solid yellow;">
+            <ol>Example 2: <b> ls command with -a option</b>
+
+                <ol>
+                    <b>ls -a</b> <br>
+                    --Here <b>-a</b> means <b>all</b>. <br>
+                    --It will list out all files and directory from current working path <br>
+                    --including hidden files and directories <br>
+                    --Hidden File or Hidden Directory means - The file or <br>
+                    --Directory whose name start with <b>dot</b> <br>
+                    <img src="/image/linux_images/ls -a.jpg" alt="" width="700" height="200">
+                </ol>
+            </ol>
+        </div><br>
+
+
+
+
+        <div style="border: 2px solid yellow;">
+            <ol>Example 3: <b> ls command with -A option</b>
+
+                <ol><b>ls -A</b><br>
+                    --Here <b>-A</b> means <b>Almost all</b>.<br>
+                    --It will list out all files and directories including<br>
+                    --<b>single dot</b> but not double dot. <br>
+                    <img src="/image/linux_images/ls -Aa.jpg" alt="" width="700" height="200">
+                </ol>
+            </ol>
+        </div><br>
+
+
+
+
+        <div style="border: 2px solid yellow;">
+            <ol>Example 4: <b> ls command with -r option.</b>
+
+                <ol>--by default ls command display file name and directories <br>
+                    --names in ascending order (A,B,...Z, a,b,c,...z) <br>
+                    --<b>ls -r</b> : It will display file names and directory in reverse of <br>
+                    --alphabetical Order (z,y,x....a,Z,Y,X,...A) <br>
+                    <img src="/image/linux_images/ls -r.jpg" alt="" width="700" height="200">
+                </ol>
+            </ol>
+        </div><br>
+
+
+
+
+
+        <div style="border: 2px solid yellow;">
+            <ol>Example 5: <b>ls command with -s option</b>
+
+                <ol>Here <b>-s</b> means <b>size</b>.<br>
+                    --<b>ls -s</b> : it will display file names along with its size.<br>
+                    --If we want size in human readable format then use <b>-h</b> option<br>
+                    --with <b>-s</b> as below<br>
+                    --<b>ls -sh</b></ol><br>
+                <img src="/image/linux_images/ls -sh.jpg" alt="" width="700" height="200">
+            </ol>
+        </div><br>
+
+
+
+
+        <div style="border: 2px solid yellow;">
+            <ol>Example 6: <b>ls command with -t option</b>
+                <ol>--Here -t means time.<br>
+                    --<b>ls -t</b> : Display file name as per date of creation.<br>
+                    --The file which is created first means older file get display<br>
+                    --first and new file or recently created file name get display at least <br>
+                    <img src="/image/linux_images/ls -t.jpg" alt="" width="700" height="200">
+                </ol>
+            </ol>
+        </div><br>
+
+        <div style="border: 2px solid yellow;">
+            <ol> Example 7: <b>ls command with -l option </b>
+
+                <ol>--Here <b>-l</b> means <b>long information.</b><br>
+
+                    --<b>ls -l</b> command out put get display in <b>7 colums</b> as below<br>
+                    <img src="/image/linux_images/ls -l.jpg" alt="" width="700" height="200"><br><br>
+
+
+                    -- <b>First column</b> give information about file type and its permission.<br>
+                    <img src="/image/linux_images/ls first block.jpg" alt=""><br><br>
+
+                    -- In <b>first column</b> there are total <b>10 characters</b>.<br>
+                    --Out of 10 <b>first character</b> always talks about <b>file type</b>.<br>
+                    <img src="/image/linux_images/ls first char.jpg" alt=""><br>
+                    -- Remaining <b>9 characters</b> from first column give information<br>
+                    &nbsp;&nbsp;&nbsp; about <b>permission </b> <br>
+                    <img src="/image/linux_images/ls nine char.jpg" alt=""><br><br>
+                </ol>
+
+
+                <b>--First Character tells file type</b>
+                <ol>
+                    <li>If first character is &nbsp;<b>-</b>&nbsp; then it is <b>normal</b> file </li>
+                    <li>If first character is &nbsp;<b>d</b>&nbsp; then it is <b>directory</b></li>
+                    <li>If first character is &nbsp;<b>l</b>&nbsp; then it is <b>link file</b></li>
+                    <li>If first character is &nbsp;<b>c</b>&nbsp; then it is <b>character</b> file </li>
+                    <li>If first character is &nbsp;<b>b</b>&nbsp; then it is <b>block special</b> files</li>
+                    <li>If first character is &nbsp;<b>s</b>&nbsp; then it is <b>socket</b> file</li>
+                </ol><br>
+
+                --Remaining 9 characters from first column give information
+                about <b>permission</b>.
+                <ol>
+                    <b>first</b> 3 character group give information about <b>owner</b> permission <br>
+                    <b>second</b> 3 character group give information about <b>group</b> permission <br>
+                    <b>last</b> 3 character group give information about <b>other user</b> permission <br>
+                    remaining 9 characters are divided into 3 group and each group contains 3 character. <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>rwx</b> &nbsp;&nbsp;&nbsp;&nbsp; <b>r-x</b>
+                    &nbsp;&nbsp;&nbsp; <b> r-x </b>
+
+                    Here <b>r,w,x</b> give the information about permission <br>
+                    <ol>
+                        <b>r</b> means <b>read</b> permission<br>
+                        <b>w </b>means <b>write</b> permission<br>
+                        <b>x</b> means <b>execute</b> permission<br>
+                        <em>--Note: in each group sequence of permission is always read
+                            write and execute.</em>
+                    </ol>
+                    <img src="/image/linux_images/ls nine char.jpg" alt=""><br>
+                    First group give information about owner permission<br>
+                    Second group give information about group permission<br>
+                    Third group give information about other user permission
+                </ol>
+                -- <b>Second column</b> give information about block. <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;i.e. How many blocks are allocated to the file. <br>
+                <ol><img src="/image/linux_images/ls secong block.jpg" alt=""></ol><br>
+
+
+                -- <b>Third column</b> give information about file owner<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;i.e. Who is owner of a file or who has created that file?<br>
+                <ol>
+                    <img src="/image/linux_images/ls third block.jpg" alt=""><br><br>
+                </ol>
+                -- <b>Fourth column</b> give information about group.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;i.e file belongs to which group?<br>
+                <ol>
+                    <img src="/image/linux_images/ls fourth block.jpg" alt=""><br><br>
+                </ol>
+                -- <b>Fifth column</b> give information about file size.<br>
+                <ol>
+                    <img src="/image/linux_images/ls fifth.jpg" alt=""><br><br>
+                </ol>
+                -- <b>Sixth column</b> give information about file creation date or
+                file modication date<br>
+                <ol>
+                    <img src="/image/linux_images/ls sixth block.jpg" alt=""><br><br>
+                </ol>
+                -- <b>Seventh column</b> give information about Name of a file.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;i.e What is name of a file or directory?<br>
+                <ol>
+                    <img src="/image/linux_images/ls seventh block.jpg" alt=""><br>
+                </ol>
+
+            </ol>
+        </div><br>
+
+        <div>
+
+            <div style="border: 2px solid yellow;">
+                Example: <b>ls</b> command with option and with file name or directory name<br>
+
+                Syntax : &nbsp;<code>ls option file_name</code> <br>
+            </div><br>
+
+            <div style="border: 2px solid yellow;">
+                Example: <b> ls -l f1.txt</b> : It will display long information of f1.txt<br>
+
+                syntax : &nbsp; <code>ls option Directory_name</code><br>
+            </div><br>
+
+            <div style="border: 2px solid yellow;">
+                Example <b>ls-l DirA</b> : list out files and directories present inside <b> DirA</b>
+                with long information
+
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+
+    <a href="Creation_of_hidden_files.html" target="_blank">Go to next page</a>
+
+
+    <pre>
+
+
+
+
+    </pre>
+
+</body>
+
+</html>

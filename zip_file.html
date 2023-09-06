@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zip file</title>
+</head>
+
+<body>
+
+    <h3> #Create zip file </h3><br>
+
+    <div style="border: 2px solid yellowgreen;">
+        <br>
+
+        <div style="border: 2px solid red;">
+            - To create a <b>zip file</b> we use <b>gzip command</b><br>
+            - Syntax: <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <code>gzip input_file_name</code>
+            <br>
+            - Example: Create a <b>zip file</b> of NumList.txt<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <code> gzip NumList.txt</code><br>
+
+            - Ones command get executed we will get <b>zip file</b> and name of
+            zip file will be <b>NumList.txt.gz</b><br>
+
+            - Note: <b>Zip file </b>has extension <b>.gz</b>
+            <br>
+        </div>
+        <br>
+
+
+
+
+
+
+
+
+
+        <div style="border: 2px solid blue;">
+
+            <ol>
+                <b># Creating zip files of multiple files at a time</b>
+                <br>
+
+                - Syntax: <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <code>gzip file_name file2_name file3_name</code><br>
+
+                <b>Example :</b><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                gzip f1.txt f2.txt f3.txt<br>
+
+                - Ones above command get executed then in the output we <br>
+                &nbsp;&nbsp;will get <b>3 zip</b> files and name of zip file will be <br>
+                &nbsp;&nbsp;<b>F1.txt.gz, f2.txt.gz and f3.txt.gz</b><br>
+
+
+
+        </div>
+
+        </ol>
+        <br>
+
+    </div>
+    <br>
+
+
+
+
+
+
+
+    <div style="border: 2px solid yellowgreen;">
+
+        <h3>#Creating of zip file of Directory</h3>
+        <br>
+
+
+        - By default we can't create <b>zip file</b> of a directory
+        using <b>gzip</b> command.<br>
+
+        - If we want to create a <b>zip file</b> of a directory
+        then first we need convert that directory into<br>
+        &nbsp;&nbsp;<b>archieve fil</b>e and then convert that archieve file into
+        into <b>zip file</b>.<br>
+
+        - Example: Suppose I have a directory <b>'DirE'</b>
+        and I want to create a <b>zip file</b> of <b>DirE</b> directory<br>
+        <br>
+
+
+        <div style="border: 2px solid blue;">
+            <ol>
+
+                <b>Step1:</b> Create an archieve file of DirE<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <code>tar -cvf DirE.tar DirE</code>
+                <br>
+
+                ones this command get executed we will get<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <b>DirE.tar file</b><br>
+                <br>
+                <br>
+
+                <b>Step 2:</b> Create zip file of that tar file as below<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <code>gzip DirE.tar</code>
+                <br>
+
+                ones this command get executed then we will get<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <b>DirE.tar.gz</b><br>
+
+            </ol>
+        </div>
+        <br>
+
+    </div>
+    <br>
+    <a href="cut_command.html" target="_blank">Go to next page</a>
+
+
+
+
+    <pre>
+
+
+
+
+
+    </pre>
+</body>
+
+</html>
